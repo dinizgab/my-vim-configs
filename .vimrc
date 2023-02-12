@@ -5,6 +5,7 @@ set number
 set title
 set autoread
 set list
+set autoindent
 set listchars=space:·,tab:··
 
 set hlsearch
@@ -26,7 +27,13 @@ Plug 'morhetz/gruvbox'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'ryanoasis/vim-devicons'
+
 Plug 'preservim/nerdtree'
+Plug 'Xuyuanp/nerdtree-git-plugin'
+
+Plug 'airblade/vim-gitgutter'
+
+Plug 'tpope/vim-eunuch'
 
 call plug#end()
 
@@ -38,5 +45,11 @@ let g:airline_powerline_fonts = 1
 let g:airline_theme = 'gruvbox'
 let fancy_symbols_enabled = 1
 
-"Maps and remaps"
+nmap <leader>n :NERDTreeFocus<CR>
+nmap <C-f> :NERDTreeFind<CR>
 nmap <C-n> :NERDTreeToggle<CR> 
+map <C-l> :tabn<CR>
+map <C-h> :tabp<CR>
+map <C-t> :tabnew<CR>
+
+
